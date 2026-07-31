@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIM CHAMRAOEN - Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold tracking-tight text-white hover:text-brand-500 transition-colors">
+                CHAMRAOEN<span class="text-brand-500">.</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-slate-300 text-sm">
+                <a href="#home" class="hover:text-brand-500 transition-colors">Home</a>
+                <a href="#experience" class="hover:text-brand-500 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-brand-500 transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-brand-500 transition-colors">Skills</a>
+                <a href="#education" class="hover:text-brand-500 transition-colors">Education</a>
+                <a href="#contact" class="px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-semibold transition-all">Contact Me</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl text-slate-300 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 space-y-3">
+            <a href="#home" class="block text-slate-300 hover:text-brand-500">Home</a>
+            <a href="#experience" class="block text-slate-300 hover:text-brand-500">Experience</a>
+            <a href="#projects" class="block text-slate-300 hover:text-brand-500">Projects</a>
+            <a href="#skills" class="block text-slate-300 hover:text-brand-500">Skills</a>
+            <a href="#education" class="block text-slate-300 hover:text-brand-500">Education</a>
+            <a href="#contact" class="block text-brand-500 font-medium">Contact Me</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen pt-32 pb-16 flex items-center justify-center relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 lg:px-4 py-2 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-500 text-sm font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                    Available for Work & Internships
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-indigo-300">KIM CHAMRAOEN</span>
+                </h1>
+                
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-400">
+                    Web Developer & UX/UI Enthusiast
+                </h2>
+                
+                <p class="text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+                    Motivated Information Technology student with experience in building full-stack web applications. Skilled in <span class="text-slate-200">Laravel Livewire, MySQL, PostgreSQL</span>, and responsive frontend frameworks. Passionate about creating seamless user experiences.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-4">
+                    <a href="#projects" class="px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold transition-all shadow-lg shadow-brand-600/30">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold transition-all">
+                        Get In Touch
+                    </a>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="flex items-center gap-4 pt-6">
+                    <a href="https://github.com/kimchamraoen" target="_blank" class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-brand-500 transition-all">
+                        <i class="fa-brands fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kim-chamraoen-20654636b/" target="_blank" class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-brand-500 transition-all">
+                        <i class="fa-brands fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://web.facebook.com/chamraoen.kim" target="_blank" class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-brand-500 transition-all">
+                        <i class="fa-brands fa-facebook text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/cmroengiim" target="_blank" class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-brand-500 transition-all">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Avatar/Image Container -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-brand-500 to-purple-600 blur-xl opacity-50 group-hover:opacity-75 transition duration-500"></div>
+                    <img src="assets/image.png" alt="Kim Chamraoen" class="relative rounded-full w-64 h-64 sm:w-80 sm:h-80 object-cover border-4 border-slate-900 shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-slate-900/50 border-y border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">Work Experience</h2>
+                <p class="text-slate-400">Professional and practical background in software development.</p>
+            </div>
+
+            <div class="space-y-8 max-w-4xl mx-auto">
+                <!-- Laor Media -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-brand-500/50 transition-all shadow-sm">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Web Developer Intern</h3>
+                            <p class="text-brand-500 font-medium">Laor Media Company</p>
+                        </div>
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-300 w-max">2026</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-400 text-sm sm:text-base leading-relaxed">
+                        <li>Built and maintained full-stack web application features using <strong>Laravel Livewire</strong>.</li>
+                        <li>Designed, optimized, and managed relational databases with <strong>MySQL</strong>.</li>
+                        <li>Integrated <strong>Telegram Bot API</strong> for automated notifications and scheduling functionality.</li>
+                        <li>Collaborated using Git/GitHub for structured version control and team-based workflows.</li>
+                    </ul>
+                </div>
+
+                <!-- ITC Web Project -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-brand-500/50 transition-all shadow-sm">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Web Developer</h3>
+                            <p class="text-brand-500 font-medium">Institute of Technology of Cambodia</p>
+                        </div>
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-300 w-max">2026</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-400 text-sm sm:text-base leading-relaxed">
+                        <li>Developed a Research Innovation Science platform using <strong>Laravel Livewire</strong> & <strong>PostgreSQL</strong>.</li>
+                        <li>Built search features and document sharing channels for academic researchers.</li>
+                        <li>Practiced frontend components with Vue.js, React.js, Angular, and Blade engine.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">Featured Projects</h2>
+                <p class="text-slate-400">Select academic and personal projects built during studies.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:-translate-y-1 transition-all flex flex-col justify-between p-6">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-500 flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-flask"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Research Management System</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            A web platform enabling researchers to create profiles, organize publications, and share resources securely.
+                        </p>
+                    </div>
+                    <a href="https://github.com/kimchamraoen/RIC_project_I4" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-500 hover:text-brand-400 transition-colors">
+                        View Repository <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:-translate-y-1 transition-all flex flex-col justify-between p-6">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-500 flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Sport Club Booking System</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            Web-based venue booking system allowing users to check schedule availability and book sport fields online.
+                        </p>
+                    </div>
+                    <a href="https://github.com/KongBopha/Sport-Venue-Booking-System-Group02" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-500 hover:text-brand-400 transition-colors">
+                        View Repository <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:-translate-y-1 transition-all flex flex-col justify-between p-6">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-500 flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">E-Commerce Frontend Platform</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            Responsive e-commerce frontend interface built with modern UI design focusing on category navigation and device support.
+                        </p>
+                    </div>
+                    <a href="https://github.com/Chankiry/EcommerceWeb" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-500 hover:text-brand-400 transition-colors">
+                        View Repository <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-900/50 border-y border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">Skills & Technologies</h2>
+                <p class="text-slate-400">Technical stack and tools used in development.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 text-center hover:border-brand-500 transition-colors">
+                    <p class="font-bold text-white">Laravel</p>
+                    <span class="text-xs text-slate-500">Livewire / Blade</span>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 text-center hover:border-brand-500 transition-colors">
+                    <p class="font-bold text-white">Frontend</p>
+                    <span class="text-xs text-slate-500">HTML / CSS / JS</span>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 text-center hover:border-brand-500 transition-colors">
+                    <p class="font-bold text-white">Databases</p>
+                    <span class="text-xs text-slate-500">MySQL / PostgreSQL</span>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 text-center hover:border-brand-500 transition-colors">
+                    <p class="font-bold text-white">Frameworks</p>
+                    <span class="text-xs text-slate-500">React / Vue Basics</span>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 text-center hover:border-brand-500 transition-colors">
+                    <p class="font-bold text-white">UI/UX Design</p>
+                    <span class="text-xs text-slate-500">Figma Wireframing</span>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 text-center hover:border-brand-500 transition-colors">
+                    <p class="font-bold text-white">Java</p>
+                    <span class="text-xs text-slate-500">Java Basic</span>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 text-center hover:border-brand-500 transition-colors">
+                    <p class="font-bold text-white">Python</p>
+                    <span class="text-xs text-slate-500">Python Basic</span>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 text-center hover:border-brand-500 transition-colors">
+                    <p class="font-bold text-white">Languages</p>
+                    <span class="text-xs text-slate-500">Khmer / English</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">Education & Training</h2>
+                <p class="text-slate-400">Academic journey and completed certifications.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto border-l-2 border-slate-800 pl-6 space-y-10">
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-slate-950"></div>
+                    <span class="text-xs font-semibold text-brand-500">2021 - 2026</span>
+                    <h3 class="text-xl font-bold text-white">Institute of Technology of Cambodia</h3>
+                    <p class="text-slate-400 text-sm">Information Communication Engineering</p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-slate-950"></div>
+                    <span class="text-xs font-semibold text-brand-500">2025</span>
+                    <h3 class="text-xl font-bold text-white">Sister of Code Program</h3>
+                    <p class="text-slate-400 text-sm">Frontend Development & Web Design</p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-slate-950"></div>
+                    <span class="text-xs font-semibold text-brand-500">2024</span>
+                    <h3 class="text-xl font-bold text-white">CSTAD</h3>
+                    <p class="text-slate-400 text-sm">UX/UI Design Course (Built ReactJS platform project)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-slate-900 border-t border-slate-800 py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center space-y-8">
+            <h2 class="text-3xl font-bold text-white">Get In Touch</h2>
+            <div class="flex flex-wrap justify-center gap-8 text-slate-300 text-sm font-medium">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-brand-500"></i> 096 915 4553
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-envelope text-brand-500"></i> kimchamraoen@gmail.com
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-brand-500"></i> St 608, Toulkok, Phnom Penh
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-slate-500 text-xs">
+                &copy; 2026 KIM CHAMRAOEN. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Nav Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
